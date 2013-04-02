@@ -198,6 +198,7 @@ var isis = function() {
     new City('Hong Kong'),
     new City('Moscow'),
     new City('Sydney')
+    new City('Mumbai')
   ];
   
   Game = function() {
