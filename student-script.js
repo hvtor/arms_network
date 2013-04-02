@@ -43,6 +43,9 @@ for (var priceIndex = 0; priceIndex<newCity.items.length; priceIndex++){
  * Hint:
  * Use prompt() and confirm() to get and valid user input
  */
+
+// Attempting to decrement price of item, from balance.  Continue here.
+ 
 isis.Game.prototype.buyItem = function(item) {
   console.log('trying to buy ' + item.name);  
 
