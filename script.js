@@ -39,7 +39,6 @@ var isis = function() {
   
     do {
       var item;
-    
       do {
         var num = Math.floor(Math.random() * array.length);
         item = array[num];
@@ -197,13 +196,13 @@ var isis = function() {
     new City('London'),
     new City('Hong Kong'),
     new City('Moscow'),
-    new City('Sydney')
+    new City('Sydney'),
     new City('Mumbai')
   ];
   
   Game = function() {
     this.cities = _cities;
-    this.currentCity = _cities[getRandomIntInRange(0, _cities.length)];
+    this.currentCity = _cities[getRandomIntInRange(0, _cities.length  - 1)];
     this.badThings = [];
     
     // var name = prompt('Agent: enter a codename');

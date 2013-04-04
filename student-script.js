@@ -44,10 +44,21 @@ for (var priceIndex = 0; priceIndex<newCity.items.length; priceIndex++){
  * Use prompt() and confirm() to get and valid user input
  */
 
-// Attempting to decrement price of item, from balance.  Continue here.
- 
+
 isis.Game.prototype.buyItem = function(item) {
-  console.log('trying to buy ' + item.name);  
+  console.log('trying to buy ' + item.name);
+  
+  // prompt for confirmation 
+  var quantity = prompt("What quantity of "+ item.name + " do you want?", 1);
+  // confirm user input
+  confirm("Are you sure?");
+  // add to inventory
+  this.agent.inventory.push(item, quantity);
+  // subtract item price from balance
+  this.agent.money -= item.currentPrice*quantity;
+  console.log(this);
+  
+  this.refreshViews()
 
 }
 
@@ -66,8 +77,11 @@ isis.Game.prototype.buyItem = function(item) {
  * is trying to sell.
  */
 isis.Game.prototype.sellItem = function(inventoryItem) {
+  findItem
   var value = inventoryItem.item.currentPrice * inventoryItem.quantity;
-  console.log('trying to sell ' + inventoryItem.item.name + ', I have ' + inventoryItem.quantity + ' worth $' + value);
+  // console.log('trying to sell ' + inventoryItem.item.name + ', I have ' + inventoryItem.quantity + ' '+inventoryItem.name ' worth $' + value);
+
+
 }
 
 
